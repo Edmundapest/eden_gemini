@@ -1,0 +1,26 @@
+<div class="p-4 sm:ml-64">
+  <div
+    class="rounded-lg border-2 border-dashed border-secondary-600 p-4 dark:border-gray-700"
+  >
+    <div
+      cdkDropList
+      cdkDropListOrientation="mixed"
+      class="mb-4 grid grid-cols-3 gap-4"
+      (cdkDropListDropped)="drop($event)"
+    >
+      @for (photo of photos(); track photo.id) {
+        <div
+          cdkDrag
+          cdkDropListOrientation="mixed"
+          class="flex h-60 resize items-center justify-center rounded bg-accent-200 dark:bg-gray-800"
+          [style.backgroundImage]="'url(' + photo.baseUrl + ')'"
+        >
+          <!--
+          <p class="text-2xl text-gray-400 dark:text-gray-500">
+            <span>{{ photo.filename }}</span>
+          </p>-->
+        </div>
+      }
+    </div>
+  </div>
+</div>

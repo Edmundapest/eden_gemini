@@ -1,0 +1,6 @@
+<div>
+  @for (item of items; track item) {
+    {{ item.name }} - {{ item.description }}
+  }
+</div>
+<button (click)="addItem()">Add Item</button>

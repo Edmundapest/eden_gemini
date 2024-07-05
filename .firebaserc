@@ -1,0 +1,9 @@
+{
+  "projects": {
+    "default": "eden-gemini",
+    "development": "eden-gemini"
+  },
+  "targets": {},
+  "etags": {},
+  "dataconnectEmulatorConfig": {}
+}

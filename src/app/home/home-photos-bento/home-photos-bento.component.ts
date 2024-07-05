@@ -5,17 +5,17 @@ import {
   CdkDropList,
   moveItemInArray,
 } from '@angular/cdk/drag-drop'
-import { GooglePhotosService } from './google-photos.service'
 import { GoogleApiService } from '../../google-api.service'
+import { GooglePhotosService } from '../home-photos/google-photos.service'
 
 @Component({
-  selector: 'app-home-photos',
+  selector: 'app-home-photos-bento',
   standalone: true,
   imports: [CdkDropList, CdkDrag],
-  templateUrl: './home-photos.component.html',
-  styleUrl: './home-photos.component.css',
+  templateUrl: './home-photos-bento.component.html',
+  styleUrl: './home-photos-bento.component.css',
 })
-export class HomePhotosComponent {
+export class HomePhotosBentoComponent {
   photos = signal<any[]>([])
 
   constructor(

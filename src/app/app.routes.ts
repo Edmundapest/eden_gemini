@@ -6,6 +6,8 @@ import { AccessGuardService } from './access-guard.service'
 import { HomeDashboardComponent } from './home/home-dashboard/home-dashboard.component'
 import { HomePhotosComponent } from './home/home-photos/home-photos.component'
 import { HomePhotosDebugComponent } from './home/home-photos-debug/home-photos-debug.component'
+import { HomeThreeJsComponent } from './home/home-three-js/home-three-js.component'
+import { HomePhotosBentoComponent } from './home/home-photos-bento/home-photos-bento.component'
 
 export const routes: Routes = [
   {
@@ -37,6 +39,16 @@ export const routes: Routes = [
         path: 'photos-debug',
         component: HomePhotosDebugComponent,
         data: { animation: 'HomePhotosDebugPage' },
+      },
+      {
+        path: 'photos-bento',
+        component: HomePhotosBentoComponent,
+        data: { animation: 'HomePhotosBentoPage' },
+      },
+      {
+        path: 'three-js',
+        component: HomeThreeJsComponent,
+        data: { animation: 'HomeThreeJsPage' },
       },
     ],
   },

@@ -1,6 +1,20 @@
-<div>
-  @for (item of items; track item) {
-    {{ item.name }} - {{ item.description }}
-  }
+<div class="p-4 sm:ml-64">
+  <div
+    class="rounded-lg border-2 border-dashed border-secondary-600 p-4 dark:border-gray-700"
+  >
+    <div class="mb-4 grid grid-cols-3 gap-4">
+      @for (item of items(); track item.id) {
+        <div
+          class="flex h-60 resize items-center justify-center rounded bg-accent-200 dark:bg-gray-800"
+        >
+          {{ item.name }} - {{ item.id }}
+        </div>
+      }
+
+      <button (click)="addItem()">Add Item</button>
+      <button (click)="loginWithGoogle()">Login with Google</button>
+      <button (click)="logout()">Sign out</button>
+      <button (click)="check_console()">Check if logged in</button>
+    </div>
+  </div>
 </div>
-<button (click)="addItem()">Add Item</button>

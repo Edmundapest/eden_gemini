@@ -37,4 +37,28 @@ export class GooglePhotosService {
     //this.photos_array.set(await response.json())
     return photos_array
   }
+
+  async getPhotosWithPageToken(
+    accessToken: string,
+    pageSize: any,
+    nextPageToken?: any,
+  ): Promise<any> {
+    const options = new URLSearchParams({
+      pageSize: pageSize,
+    })
+    if (nextPageToken) {
+      options.append('pageToken', nextPageToken)
+    }
+    const headers = {
+      Authorization: `Bearer ${accessToken}`,
+    }
+
+    const response = await fetch(`${this.baseUrl}?${options}`, {
+      headers: headers,
+    })
+
+    const photos_array = await response.json()
+    //this.photos_array.set(await response.json())
+    return photos_array
+  }
 }

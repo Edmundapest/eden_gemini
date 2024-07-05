@@ -40,7 +40,15 @@ export class HomeComponent {
     this.router.navigate([`/home/photos-debug`])
   }
 
+  click_photos_bento() {
+    this.router.navigate([`/home/photos-bento`])
+  }
+
   click_dashboard() {
     this.router.navigate(['./home'])
+  }
+
+  click_three_js() {
+    this.router.navigate(['/home/three-js'])
   }
 }
